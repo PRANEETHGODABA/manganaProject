@@ -228,7 +228,7 @@ p {
 .hero-background {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #0f766e 0%, #374151 50%, #1e40af 100%);
+    background-image: url('images/100098903.jpg') ;
 }
 
 .hero-overlay {
