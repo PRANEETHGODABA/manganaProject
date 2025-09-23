@@ -132,11 +132,29 @@ p {
     color: #1f2937;
 }
 
-.logo p {
-    font-size: 0.875rem;
-    margin-bottom: 0;
-    transition: color 0.3s ease;
-    color: rgba(255, 255, 255, 0.8);
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.logo img {
+    width: 50px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.logo-text h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
+}
+
+.logo-text p {
+    font-size: 14px;
+    color: #d1d5db;
+    line-height: 1.2;
 }
 
 .header.scrolled .logo p {
@@ -164,6 +182,8 @@ p {
     color: #14b8a6;
     transform: translateY(-1px);
 }
+
+
 
 .header.scrolled .nav-link:hover {
     color: #0f766e;
@@ -228,7 +248,11 @@ p {
 .hero-background {
     position: absolute;
     inset: 0;
-    background-image: url('images/100098903.jpg') ;
+    background-image: url('images/1090778297904.png') ;
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .hero-overlay {
@@ -313,20 +337,20 @@ p {
     display: block;
     font-size: 2rem;
     font-weight: 300;
-    color: #a7f3d0;
+    color: #e5ba0d;
     margin-top: 0.5rem;
 }
 
 .hero-tagline {
-    font-size: 1.5rem;
-    color: #a7f3d0;
+    font-size: 2rem;
+    color: #0be21d;
     font-weight: 300;
     margin-bottom: 1rem;
 }
 
 .hero-description {
     font-size: 1.125rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(225, 225, 218, 0.9);
     margin-bottom: 2rem;
     max-width: 600px;
     margin-left: auto;

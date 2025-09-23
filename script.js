@@ -94,6 +94,12 @@ function toggleMobileMenu() {
         mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
         document.body.style.overflow = 'hidden';
     }
+    const mobileMenuButton = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileNav');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 }
 
 // Smooth scroll to section
