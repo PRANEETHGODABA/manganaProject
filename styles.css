@@ -60,7 +60,7 @@ p {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #0f766e, #0891b2);
+    background: linear-gradient(135deg, #c1dc6c, #275927);
     color: white;
 }
 
@@ -248,7 +248,7 @@ p {
 .hero-background {
     position: absolute;
     inset: 0;
-    background-image: url('images/1090778297904.png') ;
+    background-image: url('images/236698.jpg') ;
     background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -337,20 +337,20 @@ p {
     display: block;
     font-size: 2rem;
     font-weight: 300;
-    color: #e5ba0d;
+    color: #eae31b;
     margin-top: 0.5rem;
 }
 
 .hero-tagline {
     font-size: 2rem;
-    color: #0be21d;
+    color: #79eb93;
     font-weight: 300;
     margin-bottom: 1rem;
 }
 
 .hero-description {
     font-size: 1.125rem;
-    color: rgba(225, 225, 218, 0.9);
+    color: rgba(245, 245, 243, 0.9);
     margin-bottom: 2rem;
     max-width: 600px;
     margin-left: auto;
@@ -557,7 +557,7 @@ section {
 /* Manufacturing Section */
 .manufacturing {
     position: relative;
-    background: linear-gradient(135deg, #0f766e 0%, #1e40af 100%);
+    background: linear-gradient(135deg, #3ce7a5 10%, #6788f3 100%);
     color: white;
     overflow: hidden;
 }
@@ -721,7 +721,7 @@ section {
 /* Contact Section */
 .contact {
     position: relative;
-    background: linear-gradient(135deg, #1e40af 0%, #374151 50%, #0f766e 100%);
+    background: linear-gradient(135deg, #ee9b5f 0%, #c529f0 50%, #0f766e 100%);
     color: white;
     overflow: hidden;
 }
