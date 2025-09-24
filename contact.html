@@ -18,8 +18,8 @@
         }
         /* The main background gradient for the page */
         .main-background {
-            background-color: #16a34a; /* green-600 */
-            background-image: linear-gradient(to bottom right, #15803d, #0d9488); /* green-700 to teal-600 */
+            background-color: #75cbf0; /* green-600 */
+            background-image: linear-gradient(to bottom right, #658dfb, #30f3e3); /* green-700 to teal-600 */
         }
         /* Glass effect for cards and inputs */
         .glass-effect {
@@ -95,33 +95,40 @@
 <body class="bg-slate-50">
 
     <!-- Header Navigation -->
-    <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-md">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-slate-800 font-poppins">
-                    Manojana Piragold
+   <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-md">
+    <div class="container mx-auto px-1 py-1">
+        <div class="flex items-center justify-between">
+           <div class="flex items-center gap-0.5">
+                <img src="images/009090.png" alt="Manojana Pyrogold Logo" class="w-[50px] h-[60px] object-contain">
+                <div class="logo-text">
+                    <h1 class="text-xl font-bold text-slate-800 leading-tight">Manojana Pyrogold</h1>
+                    <p class="text-sm text-gray-500 leading-tight">Indian Pvt. Ltd.</p>
                 </div>
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-slate-600 hover:text-sky-500 transition-colors">Home</a>
-                    <a href="aboutus.html" class="text-slate-600 hover:text-sky-500 transition-colors">About Us</a>
-                    <a href="products.html" class="text-slate-600 hover:text-sky-500 transition-colors">Products</a>
-                    <a href="whyus.html" class="text-slate-600 hover:text-sky-500 transition-colors">Why Us</a>
-                    <a href="contact.html" class="text-sky-500 font-semibold border-b-2 border-sky-500 pb-1">Contact Us</a>
-                </nav>
-                <button class="md:hidden text-slate-700" id="mobile-menu-button">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
             </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-slate-600 hover:text-sky-500 transition-colors">Home</a>
+                <a href="aboutus.html" class="text-slate-600 hover:text-sky-500 transition-colors">About Us</a>
+                <a href="products.html" class="text-slate-600 hover:text-sky-500 transition-colors">Products</a>
+                <a href="whyus.html" class="text-slate-600 hover:text-sky-500 transition-colors">Why Us</a>
+                <a href="contact.html" class="text-sky-500 font-semibold border-b-2 border-sky-500 pb-1">Contact Us</a>
+            </nav>
+            <button class="md:hidden text-slate-700" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-             <a href="index.html" class="block py-2 text-slate-600 hover:text-sky-500 transition-colors">Home</a>
-             <a href="aboutus.html" class="block py-2 text-slate-600 hover:text-sky-500 transition-colors">About Us</a>
-             <a href="products.html" class="block py-2 text-slate-600 hover:text-sky-500 transition-colors">Products</a>
-             <a href="whyus.html" class="block py-2 text-slate-600 hover:text-sky-500 transition-colors">Why Us</a>
-             <a href="contact.html" class="block py-2 text-sky-500 font-semibold">Contact Us</a>
-        </div>
-    </header>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+        <a href="index.html" class="block py-2 text-slate-600 hover:text-sky-500 transition-colors">Home</a>
+        <a href="aboutus.html" class="block py-2 text-slate-600 hover:text-sky-500 transition-colors">About Us</a>
+        <a href="products.html" class="block py-2 text-slate-600 hover:text-sky-500 transition-colors">Products</a>
+        <a href="whyus.html" class="block py-2 text-slate-600 hover:text-sky-500 transition-colors">Why Us</a>
+        <a href="contact.html" class="block py-2 text-sky-500 font-semibold">Contact Us</a>
+    </div>
+</header>
 
     <!-- Main Content -->
     <main class="main-background pt-24 text-white">
