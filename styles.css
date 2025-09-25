@@ -65,7 +65,7 @@ p {
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #0d5d56, #0e7490);
+    background: linear-gradient(135deg, #cff162, #3a6a3a);
 }
 
 .btn-secondary {

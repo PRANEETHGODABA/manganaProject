@@ -6,7 +6,7 @@
     <title>About Us - Manojana Pyrogold India Pvt. Ltd.</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         /* Custom styles for animations and fonts */
@@ -29,7 +29,6 @@
             transform: translateY(0);
         }
         .hero-bg {
-            /* Using a placeholder as I can't directly use uploaded images as backgrounds */
             background-image: url('images/100098903.jpg');
             background-size: cover;
             background-position: center;
@@ -42,12 +41,91 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
+
+        /* --- STYLES FOR VISIONARIES SECTION CARDS --- */
+        .team-section {
+            padding: 40px 15px;
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .team-member {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .member-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border: 4px solid #0ea5e9; /* Matched sky-500 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover .member-photo {
+            transform: scale(1.03);
+        }
+
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .member-name {
+            font-size: 1.5em;
+            color: #34495e;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .member-title {
+            font-size: 0.95em;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        
+        .member-quote {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: auto;
+            padding-top: 15px;
+            font-style: italic;
+            border-top: 1px solid #eee;
+            width: 100%;
+        }
     </style>
 </head>
 <body class="bg-slate-50">
 
-    <!-- Header Navigation -->
-   <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-md">
+    <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-md">
     <div class="container mx-auto px-1 py-1">
         <div class="flex items-center justify-between">
             <div class="flex items-center gap-0.5">
@@ -82,7 +160,6 @@
     </div>
 </header>
 
-    <!-- Hero Section -->
     <section class="hero-bg h-[60vh] flex items-center justify-center text-white relative">
         <div class="absolute inset-0 bg-black/50"></div>
         <div class="text-center z-10 fade-in-section">
@@ -91,10 +168,8 @@
         </div>
     </section>
 
-    <!-- Main Content -->
     <main class="container mx-auto px-6 py-16 md:py-24">
 
-        <!-- Who We Are Section -->
         <section class="fade-in-section mb-20">
             <div class="text-center">
                 <h2 class="text-4xl font-bold text-slate-800 font-poppins">Who We Are</h2>
@@ -105,7 +180,6 @@
             </p>
         </section>
 
-        <!-- Our Values Section -->
         <section class="fade-in-section mb-20">
              <div class="text-center">
                 <h2 class="text-4xl font-bold text-slate-800 font-poppins">Our Values</h2>
@@ -135,7 +209,6 @@
             </div>
         </section>
 
-        <!-- Our Strengths Section -->
         <section class="fade-in-section mb-20">
             <div class="text-center">
                 <h2 class="text-4xl font-bold text-slate-800 font-poppins">Our Strengths</h2>
@@ -167,8 +240,7 @@
             </div>
         </section>
 
-        <!-- Contact Info Section -->
-        <section class="fade-in-section">
+        <section class="fade-in-section mb-20">
             <div class="text-center">
                 <h2 class="text-4xl font-bold text-slate-800 font-poppins">Get In Touch</h2>
                 <div class="w-24 h-1 bg-sky-500 mx-auto mt-4 mb-8"></div>
@@ -188,9 +260,34 @@
             </div>
         </section>
 
+        <section class="team-section">
+             <div class="text-center">
+                <h2 class="text-4xl font-bold text-slate-800 font-poppins">Meet Our Visionaries</h2>
+                <div class="w-24 h-1 bg-sky-500 mx-auto mt-4 mb-8"></div>
+            </div>
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/1000220208.png" alt="S.S Rathi">
+                    </div>
+                    <h3 class="member-name">Pardasaradhi Baggam</h3>
+                    <p class="member-title">Founder & CEO</p>
+                    <p class="member-quote">"Our foundation is built on an unwavering commitment to quality and sustainable innovation."</p>
+                </div>
+    
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/1000220207.png" alt="Ravi Rathi">
+                    </div>
+                    <h3 class="member-name">Anil KumarBaggam </h3>
+                    <p class="member-title">Director</p>
+                    <p class="member-quote">"We drive progress by integrating cutting-edge technology with responsible manufacturing."</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer -->
     <footer class="bg-slate-800 text-white">
         <div class="container mx-auto px-6 py-8 text-center">
             <p>&copy; 2025 Manojana Pyrogold India Pvt. Ltd. All Rights Reserved.</p>
@@ -207,7 +304,7 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // JavaScript for fade-in animations on scroll
+        // JavaScript for fade-in animations on scroll (for main sections)
         const sections = document.querySelectorAll('.fade-in-section');
 
         const observer = new IntersectionObserver((entries) => {
@@ -222,6 +319,30 @@
 
         sections.forEach(section => {
             observer.observe(section);
+        });
+
+        // SCRIPT FOR VISIONARIES FADE-IN
+        const teamMembers = document.querySelectorAll('.team-member');
+
+        const teamObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        });
+
+        teamMembers.forEach(member => {
+            member.style.opacity = 0; // Hide initially
+            member.style.transform = 'translateY(20px)'; // Prepare for animation
+            member.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            teamObserver.observe(member);
         });
     </script>
 
