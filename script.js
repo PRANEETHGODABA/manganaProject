@@ -457,3 +457,76 @@ if (typeof module !== 'undefined' && module.exports) {
         scrollToSection
     };
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const chatButton = document.getElementById('ai-chat-toggle-button');
+    const chatBox = document.getElementById('ai-chat-box');
+    const chatBody = document.getElementById('chat-body');
+    const optionButtons = document.querySelectorAll('.option-button');
+    const icon = chatButton.querySelector('i');
+
+    icon.style.display = 'none'; 
+
+    chatButton.addEventListener('click', function() {
+      const isOpen = chatBox.classList.toggle('is-open');
+      chatButton.classList.toggle('is-open');
+      if (isOpen) {
+        icon.className = 'fas fa-times'; 
+        icon.style.display = 'block';
+      } else {
+        icon.style.display = 'none'; 
+      }
+      if (isOpen) {
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }
+    });
+
+    const getAiResponse = (questionType) => {
+      switch (questionType) {
+        case 'cost':
+          return "For specific product costs, please check our <strong>Services</strong> page, or request a quote. Prices vary.";
+        case 'payment':
+          return "For payment issues, please contact our Accounts Department at <strong>accounts@manojanaprogold.com</strong>.";
+        case 'address':
+          return "Our location: <strong>FLAT NO.416, SRI SESHADRI RESIDENCE, PENDURTHI, VISAKHAPATNAM - 531173</strong>.";
+        case 'contact':
+          return "Reach sales via <strong>anilbaggam@gmail.com</strong> or call during business hours (Mon-Fri).";
+        default:
+          return "I didn't catch that. Please select one of the options or email us directly.";
+      }
+    };
+
+    optionButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const questionType = this.getAttribute('data-question');
+        const userQuestion = this.textContent;
+        const aiAnswer = getAiResponse(questionType);
+
+        const userMsg = document.createElement('div');
+        userMsg.classList.add('message', 'user-message');
+        userMsg.textContent = userQuestion;
+        chatBody.appendChild(userMsg);
+
+        const aiMsg = document.createElement('div');
+        aiMsg.classList.add('message', 'ai-message');
+        aiMsg.innerHTML = aiAnswer; 
+        chatBody.appendChild(aiMsg);
+
+        optionButtons.forEach(btn => btn.disabled = true);
+        
+        setTimeout(() => {
+          const restartButton = document.createElement('button');
+          restartButton.classList.add('option-button');
+          restartButton.textContent = "Start Over / See Options";
+          restartButton.addEventListener('click', () => {
+            chatBody.innerHTML = '<div class="message ai-message">Hello! I\'m your quick assistant. How can I help you today? Please choose an option below.</div>';
+            optionButtons.forEach(btn => btn.disabled = false);
+            restartButton.remove();
+            chatBody.scrollTop = chatBody.scrollHeight;
+          });
+          document.getElementById('chat-options').appendChild(restartButton);
+          chatBody.scrollTop = chatBody.scrollHeight;
+        }, 100);
+      });
+    });
+  });
